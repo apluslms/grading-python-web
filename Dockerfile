@@ -18,7 +18,8 @@ RUN curl -SLO https://github.com/mozilla/geckodriver/releases/download/v0.17.0/g
   && rm geckodriver-v0.17.0-linux64.tar.gz
 
 ADD requirements.txt /root
-RUN pip3 install -r /root/requirements.txt
+RUN pip3 install -r /root/requirements.txt \
+  && rm -rf /root/.cache
 
 ADD bin /usr/local/bin
 ADD assets /assets
