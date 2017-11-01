@@ -1,5 +1,7 @@
 FROM apluslms/grading-python:3.5-1.1
 
+ENV LANG C.UTF-8
+
 RUN apt-get update -qqy && apt-get install -qqy --no-install-recommends \
     wbritish \
     xvfb \
