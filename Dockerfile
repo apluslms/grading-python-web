@@ -1,4 +1,4 @@
-FROM apluslms/grading-python:3.5-1.1
+FROM apluslms/grade-python:3.5-2.6
 
 ENV LANG C.UTF-8
 
