@@ -1,14 +1,14 @@
-FROM apluslms/grade-python:3.5-2.7
+FROM apluslms/grade-python:3.6-2.7
 
 ENV LANG C.UTF-8
 
-RUN apt-get update -qqy && apt-get install -qqy --no-install-recommends \
+RUN apt_install \
     wbritish \
     xvfb \
     xauth \
   && echo "deb http://archive.ubuntu.com/ubuntu precise universe restricted" >> /etc/apt/sources.list \
   && echo "deb http://archive.ubuntu.com/ubuntu precise-security main universe restricted" >> /etc/apt/sources.list \
-  && apt-get update -qqy && apt-get install -qqy --no-install-recommends --allow-unauthenticated \
+  && apt_install --allow-unauthenticated \
     firefox \
   && head -n -2 /etc/apt/sources.list > tmp.list \
   && mv tmp.list /etc/apt/sources.list \
