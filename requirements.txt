@@ -1,4 +1,5 @@
 html5lib==1.0.1
 tinycss==0.4
+pyjsparser==2.7.1
 Django==2.1.3
 selenium==3.6.0
